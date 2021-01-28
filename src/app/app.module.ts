@@ -1,26 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
-import { DesktopModule } from './desktop/desktop.module';
-const routes: Routes = [];
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { InfragisticsImportsModule } from './infragistics-imports/infragistics-imports.module';
+
 @NgModule({
     declarations: [
         AppComponent
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule,
         BrowserAnimationsModule,
-        RouterModule.forRoot(routes),
-        DesktopModule
+        CommonModule,
+        ReactiveFormsModule,
+        FormsModule,
+        InfragisticsImportsModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
     exports: [
-        RouterModule
+
     ]
 })
 export class AppModule {
